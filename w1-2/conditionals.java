@@ -35,6 +35,15 @@ public class conditionals {
         if(marks < 0 || marks > 100) {
             System.out.println("Invalid Marks");
         }
+        
+        // and --> &&
+        // or --> ||
+        // not --> ! 
+
+        // if condition:
+        //     then do this
+        //      then do this 
+
         else {
             // actuals conditions
             if (marks >= 90 && marks <= 100) {
@@ -132,5 +141,69 @@ public class conditionals {
         // d = a++ + b-- * b + --b * a + c % 3 % c-- + --c
 
         // practice inputs and outputs
+
+        System.out.println("Enter 2 integers");         
+        int num1 = in.nextInt();
+        int num2 = in.nextInt();
+
+        System.out.println("Enter a character");
+        // String str = in.next(); // this accepts one whole word
+        char ch = in.next().charAt(0); // we get the first character
+
+        // 1) either do with if else
+        // 2) do it with switch case
+
+        // ch == '+'
+
+        switch (ch) {
+            case '+':
+                System.out.println(num1 + num2);
+                break;
+            case '-':
+                System.out.println(num1 - num2);
+                break;
+            case '*':
+                System.out.println(num1 * num2);
+                break;
+            case '/':
+                if(num2 == 0) {
+                    System.out.println("we cant divide by 0");
+                    break;
+                }
+                System.out.println(num1 / num2);
+                break;
+            case '%':
+                if(num2 == 0) {
+                    System.out.println("we cant divide by 0");
+                    break;
+                }
+                System.out.println(num1 % num2);
+                break;
+            case '^':
+                // for power --> we use Math class
+                System.out.println(Math.pow(num1, num2));
+                break;
+            
+            default:
+                System.out.println("Invalid choice");
+                break;
+        }
+
+        System.out.println("this is outside of switch case");
+
+
+        String str = "Add";
+        String str2 = "Sub";
+
+        switch(str){
+            case "Add":
+                // do something
+                break;
+            case "Sub":
+                // do something
+                break;
+            default:
+                System.out.println("have either Add or Sub, nothing else");
+        }
     }
 }
