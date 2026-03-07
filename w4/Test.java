@@ -13,6 +13,25 @@ abstract class ClassName {
     abstract int xyz(int a, int b);
 }
 
+abstract class ClassName2 extends ClassName {
+    abstract void func5();
+
+    int xyz(int a) {
+        return 0;
+    }
+}
+
+class className3 extends ClassName2 {
+    int xyz(int a, int b) {
+        return a  + b;
+    }
+
+    void func5() {};
+
+    public void func1(){};
+
+}
+
 class AbstractTest extends ClassName {
     public void func1() {
         System.out.println("I am overriding the func1");

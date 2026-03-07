@@ -26,7 +26,7 @@ interface Inter3 extends Inter2 {
     void func4();
 }
 
-class RazorPay implements PaymentGateway, Inter2 {
+class RazorPay implements Inter2 {
     public void process() {
         System.out.println("Processing payment via RazorPay");
     }
@@ -59,7 +59,7 @@ class UPIPayment implements PaymentGateway {
 
 public class InterfaceTest {
     public static void main(String[] args) {
-        RazorPay rp = new RazorPay();
+        Inter2 rp = new RazorPay();
         rp.func1();
     }
 }
