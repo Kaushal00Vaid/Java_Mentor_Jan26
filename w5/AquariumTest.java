@@ -1,4 +1,10 @@
 package w5;
+import java.util.*;
+
+class Fish extends Animal{
+
+}
+
 
 // i have to make this class a general class but with a constraint
 
@@ -19,18 +25,36 @@ class Aquarium <T> {
     public T getFish2() {
         return fish2;
     }
+
+    public void print(ArrayList<? super Fish> aquarium) {
+        // for(Animal i : aquarium) {
+        //     System.out.println(i);
+        // }
+
+        aquarium.add(new GoldFish());
+        aquarium.add(new Animal());
+        aquarium.add(new Fish());
+    }
+
+    public void operate(ArrayList<? extends Fish> aquarium) {
+
+    }
 }
 
-class GoldFish {
+class GoldFish extends Fish {
     public void func() {
         System.out.println("Hi from goldfish");
     }
 }
 
-class Shark {
+class Shark extends Fish {
     public void func() {
         System.out.println("Hi from shark");
     }
+}
+
+class Animal {
+
 }
 
 public class AquariumTest {
@@ -47,6 +71,8 @@ public class AquariumTest {
 
         // ERROR
         // Aquarium<Shark> sharkAq = new Aquarium<Shark>(s1, g1);
+
+        ArrayList<>
 
         // RAW TYPING
         Aquarium generalAq = new Aquarium(g1, s1);
