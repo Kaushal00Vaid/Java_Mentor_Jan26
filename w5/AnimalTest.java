@@ -1,4 +1,5 @@
 package w5;
+import java.util.*;
 
 class Animal {
     void func() {
@@ -12,6 +13,13 @@ class Cat extends Animal {
 
 class Dog extends Animal {
     
+    public static void print(List<? super Number> arr) {
+        for(Number i : arr) {
+            System.out.println(i);
+        }
+
+        arr.add((Number) 20);
+    }
 }
 
 // declaring generics
